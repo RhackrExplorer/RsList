@@ -1,0 +1,2 @@
+# RsList
+my usable wordlists
