@@ -1,7 +1,7 @@
-# RsList (my usable wordlists)
+# RsList (This is my usable wordlists)
 
 # This RsList is made for helping Ethical hackers and BugBounty Hunters. 
-# We are not responsible for any harm of any people and system, So kindly use it with your own resposiblity.
+⚠️ Disclaimer: The content in this repository is for educational and informational purposes only; the authors hold no responsibility for misuse. Ensure proper authorization before use, act responsibly at your own risk, and comply with all legal and ethical guidelines. 🚀
 
 
 # Thanks.....
