@@ -1,0 +1,27 @@
+#Google Dork for Open Redirects:
+--------------------------------
+inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:& inurl:http site:example[.]com
+
+#Breakdown of Google Dork:
+--------------------------
+inurl:url= | inurl:return= | inurl:next= ... → common redirect params
+inurl:& → makes sure it’s inside a query string
+inurl:http → looks for full URLs as values
+site:example[.]com → your target domain
+
+#Test for Open Redirect:
+-----------------------
+1️.Replace param value with https://evil[.]com
+2️.Check if site follows the redirect
+3️.Try bypasses (//evil.com, @ evil[.]com, ////evil.com)
+4️.See if tokens get passed along
+5️.Inject XSS payloads → javascript:alert()
+
+#Why it matters:
+----------------
+🎣 Phishing with “legit” links
+🔑 OAuth misconfig → token leak
+🌐 SSRF → hit internal services or metadata
+🕷️ Excalate to XSS
+------------------------------------------------------------
+
